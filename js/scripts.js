@@ -10,16 +10,43 @@ var track = function(first, second, third){
    if((first + second > third) && (first + third > second) && (third + second > first)){
     if(first === second && first === third){
       var triangle = "Equilateral";
+      var eqArray = [];
+      eqArray.push(first);
+      eqArray.push(second);
+      eqArray.push(third);
+
+      document.getElementById("result").innerHTML = "The dimensions " + eqArray + " form an " + triangle + " triangle!";
+      document.getElementById("image").src = "images/image4.png";
     }
     else if(first === second || first === third || second === third){
       var triangle = "Isosceles";
+      var isArray = [];
+      isArray.push(first);
+      isArray.push(second);
+      isArray.push(third);
+
+      document.getElementById("result").innerHTML = "The dimensions " + isArray + " form an " + triangle + " triangle!";
+      document.getElementById("image").src = "images/image2.png";
     }
     else{
       var triangle = "Scalene";
+      var scArray = [];
+      scArray.push(first);
+      scArray.push(second);
+      scArray.push(third);
+
+      document.getElementById("result").innerHTML = "The dimensions " + scArray + " form a " + triangle + " triangle!";
+      document.getElementById("image").src = "images/image3.png";
     }
   }
    else{
      var triangle = "NO triangle at all";
+     var noArray = [];
+     noArray.push(first);
+     noArray.push(second);
+     noArray.push(third);
+
+     document.getElementById("result").innerHTML = "The dimensions " + noArray + " form " + triangle;
+     document.getElementById("image").src = "images/image5.png";
    }
-   document.getElementById("result").innerHTML = "The type of triangle is: " + triangle;
  }
