@@ -50,3 +50,7 @@ var track = function(first, second, third){
      document.getElementById("image").src = "images/image5.png";
    }
  }
+
+ var reseting = function(){
+   document.getElementById("image").src = "images/image.png";
+ }
