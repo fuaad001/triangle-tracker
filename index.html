@@ -8,6 +8,19 @@
   </head>
   <body>
     <h1>Triangle Tracker</h1>
+    <form>
+      <label for="firstl">Enter the First Length:</label>
+      <input type="number" name="first" id = "firstl">
+      <label for="secondl">Enter the Second Length:</label>
+      <input type="number" name="second" id = "secondl">
+      <label for="thirdl">Enter the Third Length:</label>
+      <input type="number" name="third" id ="thirdl">
+      <button type="button" name="button" onclick="track()">Find Out!</button>
+    </form>
+    <div>
+      <img id ="image" src="images/image.png">
+    </div>
+    <span id = "result"></span>
     <script src="js/scripts.js"></script>
   </body>
 </html>
