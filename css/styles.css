@@ -76,3 +76,7 @@ img{
   width: 200px;
   margin: 20px;
 }
+
+.image{
+  float: none;
+}
