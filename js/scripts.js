@@ -1,13 +1,16 @@
+//Business logic
 var track = function(first, second, third){
   var firstlength = document.getElementById("firstl").value;
   var secondlength = document.getElementById("secondl").value;
   var thirdlength = document.getElementById("thirdl").value;
 
+  // Converting input to intergers
   var first = parseInt(firstlength);
   var second = parseInt(secondlength);
   var third = parseInt(thirdlength);
 
    if((first + second > third) && (first + third > second) && (third + second > first)){
+     //Checking for an equilateral triangle
     if(first === second && first === third){
       var triangle = "Equilateral";
       var eqArray = [];
@@ -18,6 +21,8 @@ var track = function(first, second, third){
       document.getElementById("result").innerHTML = "The dimensions " + eqArray + " form an " + triangle + " triangle!";
       document.getElementById("image").src = "images/image4.png";
     }
+
+    //Checking for an Isosceles triangle
     else if(first === second || first === third || second === third){
       var triangle = "Isosceles";
       var isArray = [];
@@ -28,6 +33,8 @@ var track = function(first, second, third){
       document.getElementById("result").innerHTML = "The dimensions " + isArray + " form an " + triangle + " triangle!";
       document.getElementById("image").src = "images/image2.png";
     }
+
+    //Checking for a scalene triangle
     else{
       var triangle = "Scalene";
       var scArray = [];
@@ -39,6 +46,8 @@ var track = function(first, second, third){
       document.getElementById("image").src = "images/image3.png";
     }
   }
+
+  //Result if the triangle test has failed to print no triangle
    else{
      var triangle = "NO triangle at all";
      var noArray = [];
@@ -51,6 +60,7 @@ var track = function(first, second, third){
    }
  }
 
+//Function to clear the page of images and result message
  var reseting = function(){
    document.getElementById("image").src = "images/image.png";
    document.getElementById("result").innerHTML = "";
